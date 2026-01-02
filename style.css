@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #0d0f12;
+  color: #e6e6e6;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* terminal */
+
+.terminal {
+    width: 100%;
+    max-width: 720px;
+    background: #0f1117;
+    border: 1px solid #2a2d3a;
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+/* header */
+
+.terminal-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    color: #8b90a1;
+}
+
+/* output */
+
+.terminal-output {
+    min-height: 280px;
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+.terminal-output p {
+    white-space: pre-wrap;
+}
+
+/* input */
+
+.terminal-input {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.terminal-input label {
+    color: #4ee1a0;
+}
+
+.terminal-input input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: inherit;
+    font: inherit;
+    flex: 1;
+}
+
+
+
+.log-info {
+  color: #8be9fd;
+}
+
+.log-warn {
+  color: #f1fa8c;
+}
+
+.log-error {
+  color: #ff6b6b;
+}
+
+.log-system {
+  color: #6c7086;
+}
+
+
+.terminal__input input::after {
+  content: '▮';
+  margin-left: 4px;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+.terminal__output {
+  max-height: 320px;
+  overflow-y: auto;
+}

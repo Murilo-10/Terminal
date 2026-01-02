@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Error Log</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="terminal">
+
+      <header class="terminal-header">
+        <span class="terminal-title">human-error-log</span>
+        <span class="terminal-status">read-only</span>
+      </header>
+
+    <section
+        class="terminal-output"
+        id="terminalOutput"
+        aria-live="polite">
+    </section>
+
+    <form class="terminal-input" autocomplete="off">
+        <label for="command">&gt;</label>
+        <input
+        id="command"
+        type="text"
+        placeholder="descreva a falha do dia"
+        autofocus
+        >
+    </form>
+
+    </main>
+
+<script src="JS/hour.js"></script>
+<script src="JS/message.js"></script>
+<script src="JS/main.js"></script>
+</body>
+</html>
