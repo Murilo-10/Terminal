@@ -1,5 +1,7 @@
 # Human Error Log
 
+🔗 **Demo:** [Acessar o sistema](https://terminal-beta-lime.vercel.app/)
+
 Sistema experimental que traduz falhas humanas cotidianas em logs de sistema.
 
 A interface simula um terminal em modo leitura/escrita limitada, onde o usuário descreve erros diários e o sistema responde com interpretações técnicas, irônicas e não determinísticas.
