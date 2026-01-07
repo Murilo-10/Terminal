@@ -140,16 +140,28 @@ const rules = [
 
 //  Processa a entrada do usuário e gera uma resposta
 
-function processInput(text) {
+async function processInput(text) {
   system('analyzing input...');
 
-  setTimeout(() => {
-    const response = generateResponse(text);
-    log(response.message, response.level);
-    scrollToBottom();
-  }, 600);
-}
+  try {
+    const res = await fetch("http://localhost:3000/chat", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ message: text })
+    });
 
+    const data = await res.json();
+
+    log(data.reply, "INFO");
+    scrollToBottom();
+
+  } catch (err) {
+    log("Falha ao conectar com o sistema central", "ERROR");
+    scrollToBottom();
+  }
+}
 
 // Gera uma resposta baseada nas regras definidas
 
