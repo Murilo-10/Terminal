@@ -83,8 +83,8 @@ Regras:
     /* ===== APLICA A TRAVA AQUI ===== */
     const finalReply = clampReply(reply);
 
-console.log("", reply);
-console.log("", finalReply);
+console.log("IA BRUTO:", reply);
+console.log("IA TRAVADO:", finalReply);
 res.json({ reply: finalReply });
 
   } catch (err) {
