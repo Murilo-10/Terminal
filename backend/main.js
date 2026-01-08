@@ -84,7 +84,7 @@ Regras:
     const finalReply = clampReply(reply);
 
 console.log("", reply);
-console.log("IA:", finalReply);
+console.log("", finalReply);
 res.json({ reply: finalReply });
 
   } catch (err) {
